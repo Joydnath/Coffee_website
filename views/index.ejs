@@ -1,0 +1,87 @@
+<%- include ("partials/header.ejs") %>
+
+<section>
+    <div class=" md:flex mt-12 ">
+        <!-- left side -->
+        <div class=" md:relative  md:pl-0  md:align-middle md:m-auto  ">
+          <div class="flex md:w-3/12 text-4xl md:text-5xl lg:text-6xl  w-auto  py-20 m-auto items-center justify-center">
+            <h1 class="montserrat font-bold">ONE STOP <br> <span class="font-light text-emerald-800">SHOP</span>  <span class="borel text-2xl">for</span> <br> CAMPERVAN <br> <span class="flex justify-end">RENTAL</span> </h1>
+          </div>
+
+          <!-- ______small section_____ -->
+          <div class="hidden md:flex lg:-pl-8 flex flex-wrap ">
+            <!-- left -->
+            <div class="flex md:w-full space-x-2 space-y-3 pl-12 ">
+              <p class="flex ubuntu">Cataloge</p>
+              <hr class="w-12 border border-gray-900" >
+            </div>
+            <!-- middle -->
+            <div class="md:w-1/2  text-2xl pl-12 ">
+              <p class="montserrat font-semibold">Rent <br> Campervan </p>
+            </div>
+            <!-- right -->
+            <div class="w-full md:w-1/2  text-4xl pl-12 ">
+              <button class="hover:text-gray-500" type="button" name="button"><i class="fa-solid fa-circle-arrow-left"></i></button>
+              <button class="hover:text-gray-500" type="button" name="button"><i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- right side -->
+        <div class="">
+            <div class="flex md:relative md:right-12 lg:right-48 object-cover overflow-hidden lg:w-[430px]  md:w-[350px] m-auto lg:flex-right w-[370px]  items-center rounded-lg lg:pl-12">
+                <img src="/images/pic.jpg" class="rounded-md" alt="">
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="flex poppins font-medium  md:justify-end md:right-20 lg:right-60 md:relative absolute m-auto justify-center items-center w-full -mt-20 space-x-8 ">
+              <div class=" ">
+                <a href="/explore" class="btn border-emerald-700 text-white border-2 bg-emerald-700 " type="button" name="button">Explore</a>
+                <a href="/add-coffee" class="btn border-emerald-700 border-2 text-white hover:bg-emerald-700 hover:text-white" type="button" name="button">Add Coffee</a>
+              </div>
+              <div class="">
+                <a href="/add-items" class="rounded-full border-2 border-emerald-700 px-4 py-2 text-white hover:bg-emerald-700 hover:text-white type="button" name="button"><i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+
+  <!-- ______--small section-- _____ -->
+
+    <div class="flex flex-wrap  md:hidden mt-8">
+      <!-- left -->
+      <div class="flex w-full space-x-2 space-y-3 pl-12 md:pl-24">
+        <p class="flex ubuntu">Cataloge</p>
+        <hr class="w-12 border border-gray-900" >
+      </div>
+      <!-- middle -->
+      <div class="w-1/2 md:w-1/3 pl-12 md:pl-24 text-xl">
+        <p class=" montserrat font-semibold">Rent <br> Campervan </p>
+      </div>
+      <!-- right -->
+      <div class="w-1/2 flex space-x-3 text-4xl text-gray-900   justify-center items-center">
+        <button class="hover:text-gray-500" type="button" name="button"><i class="fa-solid fa-circle-arrow-left"></i></button>
+        <button class="hover:text-gray-500" type="button" name="button"><i class="fa-solid fa-circle-arrow-right"></i></button>
+      </div>
+    </div>
+
+
+    <!-- ----------------   Details Section   ------------ -->
+
+
+    <%- include ("partials/detail.ejs") -%>
+
+    <%- include ("partials/footer.ejs") %>
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<%- include ("partials/header.ejs") %>
+
+
+<section class="pt-16 md:pt-20 mb-16">
+    <div class="pb-16 md:pb-20">
+        <p class=" flex justify-center montserrat font-bold mx-auto my-0  w-72 md:w-[550px] text-4xl md:text-5xl  ">
+            The best coffee of all over the world in one place.
+        </p>
+    </div>
+
+        <section class="flex flex-col md:flex-row md:flex-wrap px-0 space-y-6 md:px-20 md:space-y-6">
+
+            <!-- fixed part  -->
+
+
+            <!-- dynamic part  -->
+
+
+            <% if(foundExplore != 0){ %>
+                <% foundExplore.forEach((explore) => { %>
+
+
+                    <section class="flex flex-col md:flex-row md:w-1/2  justify-center m-auto md:mx-0 w-[22rem] md:my-4 md:pl-4">
+                        <!-- Left and right side  -->
+                    
+                        <div class="flex space-x-4">
+                            <!-- image and buy -->
+                            <div class="flex flex-col justify-center items-center space-y-3" >
+                                <div class="w-auto">
+                                    <img loading="lazy" class=" w-48 h-auto md:h-56 lg:h-[18rem] object-cover overflow-hidden md:w-96 overflow-hidden rounded-md" src="<%= explore.image %>" alt="<%= explore.image %>">
+                                </div>
+                                <div>
+                                    <form action="/buy" method="POST">
+                                        <button class="btn  border-emerald-700 border-2 hover:bg-emerald-700 hover:text-white" type="submit" name="info" value="<%= explore._id %>">Buy</button>
+                                    </form>
+                                </div>
+                            </div>
+            
+                            <!-- name and details  -->
+                            <div>
+                                <div class="space-y-2">
+                                    <p class="text-2xl ubuntu"><%= explore.name %></p>
+                                    <div class="flex flex-row align-middle items-center space-x-2">
+                                        <p class="font-semibold poppins">Price : </p>
+                                        <button type="button" name="button" class="btn border-gray-300"><%= explore.price %></button>
+                                    </div>
+                                    <p class="w-40 text-gray-800 montserrat"><%= explore.extension %></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </section>
+
+
+            <%  }) %>
+            <% } %>
+
+
+        </section>
+
+
+</section>
+
+<%- include ("partials/footer.ejs") %>

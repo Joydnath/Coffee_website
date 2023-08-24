@@ -1,0 +1,44 @@
+<%- include ("partials/header.ejs") %>
+
+<section class="py-16 md:h-[43.3rem] flex ">
+    <div class="flex flex-col border  m-auto justify-center">
+        <form action="" onsubmit="return false">
+            <section class="flex flex-col  md:flex-row w-[22rem] sm:w-[30rem] md:w-[44rem] lg:w-[54rem] space-y-4 md:space-y-0">
+                
+                <!-- img  -->
+                <div class=" space-y-3 md:w-1/2">
+                    <div class="w-full pb-4" id="image">
+                        <img id="add-coffee-img" class="rounded-lg max-h-[33rem] overflow-hidden object-cover" src="/images/explore/explore-2.jpeg" alt="">
+                    </div>
+                    <label id="label-file" class="text-xl ubuntu" for="input-file">Coffee image</label>
+                    <input id="input-file" class="" type="file" accept="image/jpg, image/jpeg, image/png"  onclick="imageAdded()">
+                </div>
+
+                <!-- details  -->
+
+                <div class="space-y-3 md:w-1/2 md:pl-4">
+
+                    <div class="flex flex-col">
+                        <label class="text-xl ubuntu " for="">Coffee name</label>
+                        <input class="border border-gray-300 poppins outline-none w-full h-8 px-4 rounded-lg" type="text" name="coffee-name" id="">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-xl ubuntu" for="">Coffee Price</label>
+                        <input class="border border-gray-300 poppins outline-none w-full h-8 px-4 rounded-lg" type="text" name="coffee-price" id="">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-xl ubuntu" for="">Coffee Details</label>
+                        <textarea class="border border-gray-300 poppins outline-none w-full p-4 rounded-lg" type="text" name="coffee-price" id="" rows="3" ></textarea>
+                    </div>
+                    
+                    <button class="montserrat rounded-full text-white border-2 bg-emerald-700 py-2 px-[8.1rem] sm:px-[12.1rem] md:px-[7.65rem] lg:px-[10.1rem]">Add coffee</button>
+                </div>
+
+
+            </section>
+        </form>
+
+    </div>
+</section>
+
+<%- include ("partials/footer.ejs") %>

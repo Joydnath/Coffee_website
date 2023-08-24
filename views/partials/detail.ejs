@@ -1,0 +1,86 @@
+
+<section class="md:mt-12 py-8 px-12 md:px-12 space-y-4">
+    <div class="">
+      <!-- Button  -->
+      <div class="">
+        <a href="/details" class="border border-1 border-gray-300 bg-white px-6 py-2 rounded-full hover:bg-gray-100"> <span class="poppins "> Details</span> <i class="fa-solid fa-angle-right hover:scale-110"></i> </a>
+      </div>
+    </div>
+
+    <!-- _______________Popular_____________ -->
+    <div class="md:flex space-y-3 md:space-y-0 space-x-0 md:space-x-4">
+
+
+      <!-- ------ -->
+      <div class="space-y-3 md:w-1/2 ">
+        <div class="flex w-full space-x-2 space-y-3  ">
+          <p class="flex ubuntu text-3xl">Popular</p>
+          <hr class="w-12 border border-gray-900" >
+        </div>
+
+        <div class="">
+          <p class=" md:w-9/12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an dummy text ever since the north, when an </p>
+        </div>
+      </div>
+
+
+      <!-- ------ -->
+      <div class=" md:w-1/2 space-y-4">
+          <section class="flex flex-row md:flex-row space-x-3 items-center">
+            <p>01</p>
+            <div class="">
+              <img class="w-[80px]" src="/images/hotel-1-circle.png" alt="hotel1">
+            </div>
+
+            <!-- partial parts -->
+            <div class="">
+                <h1 class="text-3xl ubuntu">Euro Campain</h1>
+                <button type="button" name="button" class="btn border-gray-300">$54.99</button>
+                <p>This is the best hotel room in Europe</p>
+            </div>
+          </section>
+
+          <section class="flex flex-row md:flex-row space-x-3 items-center">
+            <p>02</p>
+            <div class="">
+              <!-- <img class="w-[80px]" src="/images/hotel-2-circle.png" alt="hotel1"> -->
+              <img class="w-[80px]" src="/images/hotel-2-circle.png" alt="">
+            </div>
+
+            <!-- partial parts -->
+            <div class="">
+                <h1 class="text-3xl ubuntu">Euro Campain</h1>
+                <button type="button" name="button" class="btn border-gray-300">$54.99</button>
+                <p>The premium hotel in dubai</p>
+            </div>
+          </section>
+
+          <!-- dynamic ejs section  -->
+
+          <% if(foundItems.length > 0){ %>
+            <%  foundItems.forEach( component => { %>
+                <section class="flex flex-row md:flex-row space-x-3 items-center">
+                  <p> <%= component.serialNo %></p> 
+                  <div class="">
+                    <!-- <img class="w-[80px]" src="/images/hotel-2-circle.png" alt="hotel1"> -->
+                    <img class="w-[80px] " src="<%= component.image%>" alt="">
+                  </div>
+      
+                  <!-- partial parts -->
+                  <div class="">
+                      <h1 class="text-3xl ubuntu"><%= component.name %></h1>
+                      <button type="button" name="button" class="btn border-gray-300"><%= component.price %></button>
+                      <p><%= component.title %></p>
+                  </div>
+                </section>
+            <%  } )  %>
+          <% } %> 
+
+          
+
+      </div>
+
+    </div>
+
+
+  </section>

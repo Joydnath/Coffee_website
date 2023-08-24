@@ -1,0 +1,64 @@
+<%- include ("partials/header.ejs") %>
+
+<section class="py-16 md:h-[43.3rem] flex">
+    <div class="flex flex-col md:flex-row w-[22rem] sm:w-[30rem] md:w-[44rem] lg:w-[50rem] m-auto justify-center">
+        <!-- img  -->
+
+        <% if(buyItems != 0 ){ %>
+            <% buyItems.forEach((buyItem)=>{  %>
+
+                <div class="w-full md:w-1/2 pb-4">
+                    <img class="rounded-lg max-h-[37rem]" src="<%= buyItem.image %>" alt="image">
+                </div>
+        
+                <!-- others -->
+                <div class="flex space-y-2 m-auto flex-col justify-center w-[22rem] sm:w-[30rem] md:w-1/2 md:pl-8">
+                    <p class="text-4xl ubuntu lg:text-5xl"><%= buyItem.name %></p>
+                    <div class="flex flex-row align-middle items-center space-x-2" >
+                        <p class="font-semibold poppins">Price : </p>
+                        <button type="button" name="button" class="btn border-gray-300">$<span id="price"><%= buyItem.price %></span></button>
+                    </div>
+                    <p class="text-gray-800 montserrat md:w-60"><%= buyItem.extension %></p>
+        
+                    <!-- Quantity  -->
+                    <div class="flex flex-row space-x-4 items-center">
+                        <p class="font-semibold poppins ">Quantity</p>
+                        <div class="flex flex-row border border-gray-300 rounded-full px-3 py-1 space-x-3">
+                            <p id="quantity" class="px-2">1</p>
+                            <!-- icons -->
+                            <div class="space-x-1">
+                                <i id="increase-btn" class="fa-solid fa-angle-down rotate-180 hover:cursor-pointer hover:border hover:border-gray-300 hover:rounded-full" onclick="increaseQuantity()"></i>
+                                <i id="decrease-btn" class="fa-solid fa-angle-down hover:cursor-pointer hover:border hover:border-gray-300 hover:rounded-full" onclick="decreaseQuantity()"></i>
+                            </div>
+                        </div> 
+                    </div>
+        
+                    <div class="flex flex-row space-x-4 items-center">
+                        <p class="font-semibold poppins ">Total Price</p>
+                        <div class="flex flex-row border border-gray-600 rounded-full px-3 py-1 space-x-3">
+                            <p id="total-price" class="px-2">1</p>
+                        </div>
+                    </div>
+        
+                    <!-- Location -->
+                    <div class="">
+                        <form id="buy-form" action="" class="space-y-2" >
+                            <div class="space-x-2">
+                                <label class="font-semibold poppins" for="">Location</label>
+                                <input id="buy-input" type="text" class="border border-gray-300 poppins outline-none w-44 h-8 px-4 rounded-lg" placeholder="Delivary location" required>
+                            </div>
+                            <div class="m-auto  flex justify-center">
+                                <button id="buy-btn" class="montserrat rounded-full text-white border-2 bg-emerald-700 py-2 px-[9.5rem] sm:px-[13.5rem] md:px-[8.5rem] lg:px-[10rem]">Order</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            <% }) %>
+        <% } %>
+
+    </div>
+</section>
+
+
+<%- include ("partials/footer.ejs") %>

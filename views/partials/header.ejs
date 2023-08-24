@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room takeover</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Montserrat&family=Poppins&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="toastr.css" rel="stylesheet"/>
+    <!-- <script src="toastr.js.map"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="toastr.js.map"></script>
+    <script defer src="toastr.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+<header>
+    <section class="flex flex-row py-4 header-color md:justify-around ">
+        <div class="flex justify-center items-center w-1/2 md:w-12">
+            <a href="/"><img class="w-12" src="/images/starbucks_logo_PNG2.png" alt=""></a>
+        </div>
+        <div id="toggle-div" class="flex  w-1/2 m-auto justify-center items-center md:m-0 md:justify-end">
+            <div  class=" transition-all" class="">
+                    <input id="input" placeholder="search coffee" type="text" class= "hidden input border outline-none w-40 h-9 px-4 rounded-xl">
+                <button id="btn" class="text-white px-2 py-1 rounded-full bg-emerald-800"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </section>
+
+</header>
